@@ -1,19 +1,30 @@
-#'bdcomplete - Computes completeness values for each cell currently returns Chao2
+#'Computes completeness values of the dataset
+#'
+#'Computes completeness values for each cell. Currently returns Chao2 index of 
+#'species richness.
+#'
+#'After dividing the extent of the dataset in cells (via the
+#'\code{\link{getcellid}} function), the function calculates the Chao2 estimator
+#'of species richness. Given the nature of the calculations, a minimum number of
+#'records must be present on each cell to properly compute the index. If there
+#'are too few records in the cells, the function is unable to finish, and it
+#'throws an error.
 #'
 #'@import sqldf
-#'@param indf - Input data frame containing biodiversity data set
-#'@param recs - Minimum number of records per grid cell 
-#'  (Default is 50, if the number is too low, might give error)
-#'@return data.frame with the columns
-#' \itemize{
-#'  \item{"Cell_id"}{id of the cell}
-#'  \item{"Sobs"}{Number of Observed species}
-#'  \item{"Sest"}{Estimated number of species}
-#'  \item{"c"}{Completeness ratio the cell}
-#' }
+#'@importFrom stats na.omit
+#'@importFrom graphics plot
+#'@param indf input data frame containing biodiversity data set
+#'@param recs minimum number of records per grid cell required to make the 
+#'  calculations. Default is 50. If there are too few records, the function 
+#'  throws an error.
+#'@return data.frame with the columns \itemize{ \item{"Cell_id"}{id of the cell}
+#'  \item{"Sobs"}{Number of Observed species} \item{"Sest"}{Estimated number of 
+#'  species} \item{"c"}{Completeness ratio the cell} Plots a graph of Number of 
+#'  species vs completeness }
 #'@examples \dontrun{
 #'bdcomplete(inat)
 #'}
+#'@seealso \code{\link{getcellid}}
 #'@export
 bdcomplete <- function(indf,recs=50){
   dat1=sqldf("select Scientific_name, Date_collected, Cell_id from indf group by Scientific_name, Date_collected, Cell_id")
@@ -23,6 +34,10 @@ bdcomplete <- function(indf,recs=50){
   dat2=na.omit(dat2)
   dat3=na.omit(dat3)
   retmat=NULL
+  if(dim(dat3)[1]<1){
+    stop("Too few data records to compute completeness")
+    #return(NULL)
+  }
   for (i in 1:dim(dat3)[1]){
     Cell_id=dat3$Cell_id[i]
     cset = dat1[which(dat1$Cell_id==dat3$Cell_id[i]),]
@@ -37,5 +52,6 @@ bdcomplete <- function(indf,recs=50){
   }
   retmat=as.data.frame(retmat)
   names(retmat)=c("Cell_id","Sobs","Sest","c")
+  plot(retmat$Sobs,retmat$c,main="Completeness vs number of species",xlab="Number of species",ylab="Completeness")
   return(retmat)
 }

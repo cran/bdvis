@@ -1,18 +1,21 @@
 Package: bdvis
 Type: Package
 Title: Biodiversity Data Visualizations
-Version: 0.1.0
-Date: 2014-05-06
+Version: 0.2.0
+Date: 2016-04-02
 Author: Vijay Barve <vijay.barve@gmail.com>, Javier Otegui
     <javier.otegui@gmail.com>
 Maintainer: Vijay Barve <vijay.barve@gmail.com>
-Description: Biodiversity data visualizations using R would be helpful to
-    understand completeness of biodiversity inventory, extent of geographical,
-    taxonomic and temporal coverage, gaps and biases in data.
-License: CC0
-Imports: maps, plotrix, sqldf, plyr, taxize, treemap, ggplot2, grid
+Description: Provides a set of functions to create basic visualizations to quickly
+    preview different aspects of biodiversity information such as inventory 
+    completeness, extent of coverage (taxonomic, temporal and geographic), gaps
+    and biases.
+License: GPL-3
+Imports: maps, plotrix, sqldf, plyr, taxize, treemap, ggplot2, lattice,
+        chron, leafletR
 Suggests: rinat
-Packaged: 2014-05-06 16:48:02 UTC; Narayani
+RoxygenNote: 5.0.1
 NeedsCompilation: no
+Packaged: 2016-04-03 17:11:12 UTC; Narayani
 Repository: CRAN
-Date/Publication: 2014-05-07 07:57:17
+Date/Publication: 2016-04-03 20:04:48
