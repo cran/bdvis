@@ -1,6 +1,6 @@
-95838e332789d6b415ed38718c1317f2 *DESCRIPTION
+974c0e04a7ffe5d018c1a2c3d7e99265 *DESCRIPTION
 dbf855547c317c7fb9475b45865b8667 *NAMESPACE
-1cfb1ec52bbce551545a5492b73d6db3 *NEWS
+ff47af82f098591dfd99d88a4dabbd0f *NEWS
 09c8ace390145d3173fa49843d56b484 *R/bdcalendarheat.R
 e5b4464d19b976847b927bc4bd45e0ef *R/bdcomplete.R
 b1524a7fb106a6e266aadfd3fc35d67f *R/bdsummary.R
@@ -15,7 +15,7 @@ a3b8344d174d5a0d9320518e77cf0750 *R/getcellid.R
 ef9cf268409a5ac8ab5bcddacca6b5a1 *R/gettaxo.R
 46802d49924d0fa14e2509a30376c935 *R/mapgrid.R
 f228a95a3bc535732474afe79303dfea *R/taxotree.R
-13c5a0b0b2fa833128ee8b965bbd6686 *R/tempolar.R
+7a2cf650668fac9ea1735141dd51f721 *R/tempolar.R
 3b86de3fbae0d69588caf9ff7010a98d *README.md
 12d0140ce3c9c6ce93c2f4acef0df9b1 *man/bdcalendarheat.Rd
 b33c25db009fea0ed406f19e1cfab848 *man/bdcomplete.Rd
