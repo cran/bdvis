@@ -21,8 +21,8 @@ fixstr(indf, Latitude = NA, Longitude = NA, DateCollected = NA,
 \item{SciName}{name of the Scientific Name field in original data frame}
 }
 \description{
-This function is slated to depriciate in next version. Please use function
-\link{format_bdvis} insted.
+This function is slated to deprecate in next version. Please use function
+\link{format_bdvis} instead.
 }
 \details{
 Modify the name of certain fields in the provided data.frame to meet the
@@ -35,7 +35,6 @@ inat = fixstr(inat, DateCollected = "Date.collected", datefmt = "\%Y-\%m-\%d \%H
 }
 \seealso{
 Other Data preparation functions: \code{\link{bdsummary}},
-  \code{\link{distrigraph}}, \code{\link{getcellid}},
-  \code{\link{gettaxo}}
+  \code{\link{getcellid}}, \code{\link{gettaxo}}
 }
 
