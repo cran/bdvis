@@ -4,7 +4,7 @@
 \alias{bdcomplete}
 \title{Computes completeness values of the dataset}
 \usage{
-bdcomplete(indf, recs = 50)
+bdcomplete(indf, recs = 50, gridscale = 1)
 }
 \arguments{
 \item{indf}{input data frame containing biodiversity data set}
@@ -12,12 +12,17 @@ bdcomplete(indf, recs = 50)
 \item{recs}{minimum number of records per grid cell required to make the 
 calculations. Default is 50. If there are too few records, the function 
 throws an error.}
+
+\item{gridscale}{plot the map grids at specific degree scale. Default is 1. 
+Currently valid values are 1 and 0.1.}
 }
 \value{
-data.frame with the columns \itemize{ \item{"Cell_id"}{id of the cell}
- \item{"nrec"}{Number of records in the cell}\item{"Sobs"}{Number of Observed 
- species} \item{"Sest"}{Estimated number of species} \item{"c"}{Completeness 
- ratio the cell} Plots a graph of Number of species vs completeness }
+data.frame with the columns \itemize{ \item{"Cell_id"}{ id of the cell}
+ \item{"nrec"}{ Number of records in the cell} \item{"Sobs"}{ Number of Observed species} 
+ \item{"Sest"}{ Estimated number of species} \item{"c"}{ Completeness ratio the cell}
+ \item {"Centi_cell_id"}{ Cell ids for 0.1 degree cells} 
+ 
+ Plots a graph of Number of species vs completeness }
 }
 \description{
 Computes completeness values for each cell. Currently returns Chao2 index of 
@@ -44,4 +49,3 @@ bdcomplete(inat)
 \seealso{
 \code{\link{getcellid}}
 }
-
