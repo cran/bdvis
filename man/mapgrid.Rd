@@ -51,7 +51,7 @@ paying attention to how many records or species are present. Record-density
 maps apply a color gradient according to the number of records in the cell, 
 regardless of the number of species they represent. Species-density maps apply 
 a color gradient according to the number of different species in the cell, 
-regardless of how many records ther are for each one of those. Completeness 
+regardless of how many records there are for each one of those. Completeness 
 maps apply a color gradient according to the completeness index, from 0
 (incomplete) to 1 (complete).
 
