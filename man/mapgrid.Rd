@@ -32,8 +32,7 @@ used}
 \item{region}{Specific region(s) to map, like countries. Default is the whole
 world map}
 
-\item{gridscale}{plot the map grids at specific degree scale. Default is 1. 
-Currently valid values are 1 and 0.1.}
+\item{gridscale}{plot the map grids at 0.1 degree scale. Default is FALSE.}
 
 \item{customize}{additional customization string to customize the map output 
 using ggplot2 parameters}

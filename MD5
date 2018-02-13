@@ -1,6 +1,6 @@
-bbf9e46cd355d8356babc8da888be0ba *DESCRIPTION
+90f7965de30993b3ce31e32526ca35d6 *DESCRIPTION
 dbf855547c317c7fb9475b45865b8667 *NAMESPACE
-e7f44ad4630f55067d97132a47611af7 *NEWS
+1950f91ffe17b45643648e2ebd15b9d2 *NEWS
 06b6276269b17c34f15f27c35fda479f *R/bdcalendarheat.R
 a05fadecd2e6b2d4a0976c68e7bad53a *R/bdcomplete.R
 78973458448070fdd61fed26d7c9b4fb *R/bdsummary.R
@@ -12,11 +12,11 @@ faa9d10513d357ddfb558a1be875ef34 *R/calendarHeat.R
 7a01e4ead2d02e94361aeb6be16b8346 *R/fixstr.R
 4f45ca9fd155814c924fc02d286c1815 *R/format_bdvis.R
 a3b8344d174d5a0d9320518e77cf0750 *R/getcellid.R
-82deed33474252f1ce9adf074e1efd36 *R/gettaxo.R
-4eaba0ab33a9b77ffa36022256d66228 *R/mapgrid.R
+633ec2e5991fe3d25ea830e786e2faec *R/gettaxo.R
+9767eb38542f5956fe4d371abfadbd90 *R/mapgrid.R
 f228a95a3bc535732474afe79303dfea *R/taxotree.R
 7a2cf650668fac9ea1735141dd51f721 *R/tempolar.R
-5fd0ef62fa040f47d8816ea690e9380f *README.md
+7ad7de7abf6ce8f5dc4cb1209c193174 *README.md
 e16ca858e41223422e695884da15b17d *man/bdcalendarheat.Rd
 d8aa28cd9d2db859604230330004c860 *man/bdcomplete.Rd
 1fe32aefa88d9eb5865e03db1fcdf2e4 *man/bdsummary.Rd
@@ -27,7 +27,7 @@ d8aa28cd9d2db859604230330004c860 *man/bdcomplete.Rd
 6c2dfee82544e6f844deb26c35436d6f *man/fixstr.Rd
 4ea265b5dfbdf9740df7ce41ce0c6053 *man/format_bdvis.Rd
 9ee7c58782d7db943959466fa88bc6c8 *man/getcellid.Rd
-d445844d7a1bfe01ad3ba0b60cf0d9a2 *man/gettaxo.Rd
-25196e48d905a85ea4b102370ba3b493 *man/mapgrid.Rd
+8b8756ee8a57f7780d61e2ad91a3e9f9 *man/gettaxo.Rd
+31beba7b798a8f340814b6fb521d4557 *man/mapgrid.Rd
 676d70e3f116e2c986f38745bcbfd32b *man/taxotree.Rd
 2a6206ce6e9b5a3733d016f3f98ef376 *man/tempolar.Rd
