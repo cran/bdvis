@@ -5,8 +5,9 @@
 \title{Maps the data points on the map in grid format}
 \usage{
 mapgrid(indf = NA, ptype = "records", title = "", bbox = NA,
-  legscale = 0, collow = "blue", colhigh = "red", mapdatabase = "world",
-  region = ".", gridscale = 1, customize = NULL)
+  legscale = 0, collow = "blue", colhigh = "red",
+  mapdatabase = "world", region = ".", shp = NA, gridscale = 1,
+  customize = NULL)
 }
 \arguments{
 \item{indf}{input data frame containing biodiversity data set}
@@ -31,6 +32,8 @@ used}
 
 \item{region}{Specific region(s) to map, like countries. Default is the whole
 world map}
+
+\item{shp}{path to shapefile to load as basemap (default NA)}
 
 \item{gridscale}{plot the map grids at 0.1 degree scale. Default is FALSE.}
 
@@ -64,3 +67,4 @@ mapgrid(inat,ptype="records", region="India")
 \seealso{
 Other Spatial visualizations: \code{\link{bdwebmap}}
 }
+\concept{Spatial visualizations}

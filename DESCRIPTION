@@ -1,8 +1,8 @@
 Package: bdvis
 Type: Package
 Title: Biodiversity Data Visualizations
-Version: 0.2.20
-Date: 2018-01-29
+Version: 0.2.22
+Date: 2018-09-26
 Author: Vijay Barve <vijay.barve@gmail.com>, Javier Otegui
     <javier.otegui@gmail.com>
 Maintainer: Vijay Barve <vijay.barve@gmail.com>
@@ -12,10 +12,10 @@ Description: Provides a set of functions to create basic visualizations to quick
     and biases.
 License: GPL-3
 Imports: maps, plotrix, sqldf, plyr, taxize, treemap, ggplot2, lattice,
-        chron, leafletR
+        chron, leafletR, rgdal
 Suggests: rinat
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 NeedsCompilation: no
-Packaged: 2018-02-13 04:08:13 UTC; Narayani
+Packaged: 2018-09-26 20:35:38 UTC; Narayani
 Repository: CRAN
-Date/Publication: 2018-02-13 04:30:15 UTC
+Date/Publication: 2018-09-26 20:50:06 UTC
