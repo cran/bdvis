@@ -2,17 +2,20 @@
 % Please edit documentation in R/getcellid.R
 \name{getcellid}
 \alias{getcellid}
-\title{Assign GBIF style degree cell ids}
+\title{Assign GBIF style degree cell ids and generate custom grid cell ids}
 \usage{
-getcellid(indf)
+getcellid(indf, gridscale = 0)
 }
 \arguments{
 \item{indf}{input data frame containing biodiversity data set}
+
+\item{gridscale}{generate custom grid scale column for mapping. Default is 0.}
 }
 \description{
 Calculate and assign a GBIF-style degree cell id and centi-degree (0.1 
 degrees, dividing a 1 degree cell into 100 centi-degree cells) cell id to each
-record. This is a necessary previous step for some functions like
+record. This function also creates a custom grid scale if parameter gridscale 
+is supplied. This is a necessary previous step for some functions like
 \code{\link{mapgrid}}
 }
 \examples{
@@ -21,8 +24,9 @@ getcellid(inat)
 }
 }
 \seealso{
-Other Data preparation functions: \code{\link{bdsummary}},
-  \code{\link{fixstr}}, \code{\link{format_bdvis}},
-  \code{\link{gettaxo}}
+Other Data preparation functions: 
+\code{\link{bdsummary}()},
+\code{\link{format_bdvis}()},
+\code{\link{gettaxo}()}
 }
 \concept{Data preparation functions}
