@@ -15,6 +15,9 @@
 #'  character vector. Default is blue (less) - red (more) gradient
 #'  \code{c("red", "blue")}
 #'@param ptsize point size adjustment factor. Default is 1
+#'
+#' @return No return value, called for plotting the graph
+#'
 #'@references Arino, A. H., & Otegui, J. (2008). Sampling biodiversity sampling.
 #'  In Proceedings of TDWG (pp. 77-78). Retrieved from 
 #'  http://www.tdwg.org/fileadmin/2008conference/documents/Proceedings2008.pdf#page=77
@@ -36,10 +39,10 @@ chronohorogram <- function (indf = NA, title = "Chronohorogram", startyear = 198
   }
   dat1 = sqldf("select Date_collected, count(*) as ct from indf group by Date_collected")
   if (is.na(dat1$Date_collected[1])) {
-    dat1 = dat1[2:dim(dat1)[1], ]
+    dat1 = dat1[2:nrow(dat1), ]
   }
   if (as.character(dat1$Date_collected[1]) == "") {
-    dat1 = dat1[2:dim(dat1)[1], ]
+    dat1 = dat1[2:nrow(dat1), ]
   }
   d = as.numeric(strftime(as.Date(dat1$Date_collected, na.rm = T), 
                           format = "%j"))
@@ -56,5 +59,6 @@ chronohorogram <- function (indf = NA, title = "Chronohorogram", startyear = 198
               point.symbols = 20, grid.bg = "black", 
               radial.lim = c(startyear, endyear),  cex=ptsize, 
               show.radial.grid = T, show.grid.labels = F, show.grid = T, 
-              main = title)
+              main = title,
+              label.pos=seq(0,11*pi/6,length.out=12))
 }

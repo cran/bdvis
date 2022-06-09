@@ -12,6 +12,9 @@
 #' @importFrom stats na.omit
 #' @param indf input data frame containing biodiversity data set
 #' @param title title custom title for the plot
+#' 
+#' @return No return value, called for plotting the heatmap plot
+#' 
 #' @examples \dontrun{
 #' bdcalendarheat(inat)
 #' }
@@ -23,7 +26,6 @@ bdcalendarheat <- function(indf=NA,title=NA){
   }
   indf$Date_collected = as.Date(indf$Date_collected,"%Y-%m-%d")
   dat=sqldf("select Date_collected, count(*) as recs from indf group by Date_collected")
-  #dat=dat[2:dim(dat)[1],]
   dat=na.omit(dat)
   Year = as.numeric(strftime(as.Date(dat$Date_collected,na.rm=T), format = "%Y"))
   CurrentYear = as.numeric(strftime(as.Date(Sys.Date()), format = "%Y"))

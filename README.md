@@ -2,7 +2,7 @@
 # `bdvis`
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/bdvis)](https://cran.r-project.org/package=bdvis)
-[![Rdoc](https://www.rdocumentation.org/badges/version/bdvis/)](https://www.rdocumentation.org/packages/bdvis/)
+[![DOI](https://zenodo.org/badge/11777972.svg)](https://zenodo.org/badge/latestdoi/11777972)
 
 ## About 
 Biodiversity Data Visualizations using R. This package offers a set of
@@ -33,6 +33,8 @@ install.packages("rinat")
 require(rinat)  # Data download might take some time
 inat <- get_inat_obs_project("reptileindia") 
 inat <- format_bdvis(inat,source='rinat')
+inat <- inat[,c("id","Date_collected", "Latitude", "Longitude", 
+                "Scientific_name", "Cell_id", "Centi_cell_id")]
 ```
 
 #### bdsummary
