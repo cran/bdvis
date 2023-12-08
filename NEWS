@@ -1,3 +1,12 @@
+bdvis 0.2.37
+===============
+* Bug fixes in mapgrid
+* Funcation format_bdvis now handled bdsns
+* Package rgeos dependency removed
+* Finction mapgrid parameters mapadatabase and region deprecated
+* Fixed documentaion
+
+
 bdvis 0.2.33
 ===============
 * Function bdwebmap Deprecated due to leafletR package unavailable 
